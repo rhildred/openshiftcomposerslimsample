@@ -1,12 +1,12 @@
 {
-    "require": {
-        "slim/slim": "2.*"
-    },
-    "autoload": {
-        "psr-0": {
-            "PHPView":        "src/",
-            "PHPView\\Tests": "tests/"
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/rhildred/slimphpviews"
         }
+    ],
+    "require": {
+        "slim/slim": "2.*",
+        "rhildred/slimphpviews": "dev-master"
     }
-
 }

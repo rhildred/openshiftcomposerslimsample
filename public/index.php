@@ -1,7 +1,7 @@
 <?php
 
-ini_set('display_errors', 'On');
-error_reporting(E_ALL | E_STRICT);    
+    ini_set('display_errors', 'On');
+    error_reporting(E_ALL | E_STRICT);
 
     require '../vendor/autoload.php';
 
@@ -11,15 +11,13 @@ error_reporting(E_ALL | E_STRICT);
     $app->get('/hello/:name', function ($name) {
         echo "Hello, " . $name;
     });
-    $app->get('/viewtest', function() use ($app){
-        $app->render("richwashere.phtml", array("page" => "richwashere.phtml"));
+    $app->get('/about', function() use($app) {
+        $app->render("about.phtml", array("page" => "about"));
     });
-    $app->get('/layouttest', function() use ($app){
-        $app->render("layouttest.phtml");
+    $app->get('/', $index = function () use($app) {
+        $app->render("index.phtml", array("page" => "index"));
     });
-    $app->get('/', function () {
-        echo "Hello World!";
-    });
+    $app->get('/index', $index);
     $app->run();
     
 ?>
