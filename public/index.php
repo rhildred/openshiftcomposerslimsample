@@ -19,6 +19,9 @@
     $app->get('/about', function() use($app) {
         $app->render("about.phtml", array("page" => "about"));
     });
+    $app->get('/contact', function() use($app) {
+        $app->render("contact.phtml", array("page" => "contact"));
+    });
     $app->get('/', $index = function () use($app) {
         $app->render("index.phtml", array("page" => "index"));
     });
