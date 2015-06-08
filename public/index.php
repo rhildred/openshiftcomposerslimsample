@@ -1,13 +1,18 @@
 <?php
 
+// this is boilerplate debugging
     ini_set('display_errors', 'On');
     error_reporting(E_ALL | E_STRICT);
 
+// this is composer dependencies
     require '../vendor/autoload.php';
 
+// make a new slim object with view Engine PHPView
     $app = new \Slim\Slim(array(
         'view' => new \PHPView\PHPView(),
         'templates.path' => __DIR__ . "/../views"));
+
+// routes for the application
     $app->get('/hello/:name', function ($name) {
         echo "Hello, " . $name;
     });
