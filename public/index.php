@@ -26,6 +26,11 @@
         $app->render("index.phtml", array("page" => "index"));
     });
     $app->get('/index', $index);
+    $app->post('/mailer', function() use($app){
+        $form = json_decode($app->request->getBody());
+        $mailer = new \Mailer();
+        $mailer->mail("noreply@rhildred.github.io", $form->email, "message from " . $form->name, $form->message);
+    });
     $app->run();
     
 ?>

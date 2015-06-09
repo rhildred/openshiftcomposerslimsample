@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rhildred/mailer.git",
-                "reference": "2d3e1b5257e11be63ab60d67229db9b3b1143480"
+                "reference": "e26aacf9da1588d8f52cb8ebdf3380a62019c92d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rhildred/mailer/zipball/2d3e1b5257e11be63ab60d67229db9b3b1143480",
-                "reference": "2d3e1b5257e11be63ab60d67229db9b3b1143480",
+                "url": "https://api.github.com/repos/rhildred/mailer/zipball/e26aacf9da1588d8f52cb8ebdf3380a62019c92d",
+                "reference": "e26aacf9da1588d8f52cb8ebdf3380a62019c92d",
                 "shasum": ""
             },
             "type": "library",
@@ -27,7 +27,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2015-06-09 12:21:54"
+            "time": "2015-06-09 15:39:03"
         },
         {
             "name": "rhildred/slimphpviews",
