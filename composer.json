@@ -1,15 +1,4 @@
 {
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/rhildred/slimphpviews"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/rhildred/mailer"
-        }
-
-    ],
     "require": {
         "slim/slim": "2.*",
         "rhildred/slimphpviews": "dev-master",

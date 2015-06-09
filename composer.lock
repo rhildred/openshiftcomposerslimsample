@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "00938aaef4302cf772d938a5b95764e7",
+    "hash": "3c33fc5bb5aa22e22e96cb7f559cbb94",
     "packages": [
         {
             "name": "rhildred/mailer",
@@ -26,10 +26,7 @@
                     "": ""
                 }
             },
-            "support": {
-                "source": "https://github.com/rhildred/mailer/tree/master",
-                "issues": "https://github.com/rhildred/mailer/issues"
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "time": "2015-06-09 12:21:54"
         },
         {
@@ -55,10 +52,7 @@
                     "PHPView": ""
                 }
             },
-            "support": {
-                "source": "https://github.com/rhildred/slimphpviews/tree/master",
-                "issues": "https://github.com/rhildred/slimphpviews/issues"
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "time": "2015-06-08 12:59:19"
         },
         {
