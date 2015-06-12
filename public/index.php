@@ -40,6 +40,7 @@
         $mailer = new \Mailer();
         echo $mailer->mail("noreply@rhildred.github.io", $form->email, "message from " . $form->name, $form->message);
     });
+    $app->options('/mailer', function(){});
     $app->run();
     
 ?>
