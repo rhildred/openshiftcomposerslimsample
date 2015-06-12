@@ -4,6 +4,15 @@
     ini_set('display_errors', 'On');
     error_reporting(E_ALL | E_STRICT);
 
+// allow CORS
+
+    if(array_key_exists("HTTP_ORIGIN", $_SERVER)){
+	    header("Access-Control-Allow-Origin: " . $_SERVER["HTTP_ORIGIN"]);
+	    header("Access-Control-Allow-Headers: X-Requested-With, X-Authorization, Content-Type, X-HTTP-Method-Override");
+	    header("Access-Control-Allow-Credentials: true");
+	    header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+    }
+
 // this is composer dependencies
     require '../vendor/autoload.php';
 
