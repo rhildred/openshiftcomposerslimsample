@@ -39,6 +39,8 @@
               <a href="<?php echo $this->urlFor("index") ?>">Home</a></li>
             <li<?php if($this->data['page'] == "about"){ echo ' class="active"';}?>>
               <a href="<?php echo $this->urlFor("about") ?>">About</a></li>
+            <li<?php if($this->data['page'] == "products"){ echo ' class="active"';}?>>
+              <a href="<?php echo $this->urlFor("products") ?>">Products</a></li>
             <li<?php if($this->data['page'] == "contact"){ echo ' class="active"';}?>>
               <a href="<?php echo $this->urlFor("contact") ?>">Contact</a></li>
           </ul>

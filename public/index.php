@@ -31,6 +31,9 @@
     $app->get('/contact', function() use($app) {
         $app->render("contact.phtml", array("page" => "contact"));
     });
+    $app->get('/products', function() use($app) {
+        $app->render("products.phtml", array("page" => "products"));
+    });
     $app->get('/', $index = function () use($app) {
         $app->render("index.phtml", array("page" => "index"));
     });
@@ -39,6 +42,12 @@
         $form = json_decode($app->request->getBody());
         $mailer = new \Mailer();
         echo $mailer->mail("noreply@rhildred.github.io", $form->email, "message from " . $form->name, $form->message);
+    });
+    $app->get('/api/products', function() use($app){
+       $db = new PDO('mysql:host=localhost;dbname=products;charset=utf8', 'root', ''); 
+       $sth = $db->prepare("SELECT * FROM products");
+       $sth->execute();
+       echo json_encode($sth->fetchAll());
     });
     $app->options('/mailer', function(){});
     $app->run();
