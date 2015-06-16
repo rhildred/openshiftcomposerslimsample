@@ -21,6 +21,11 @@
         'view' => new \PHPView\PHPView(),
         'templates.path' => __DIR__ . "/../views"));
 
+// create database connection
+
+    $db = new PDO('mysql:host=localhost;dbname=products;charset=utf8', 'root', ''); 
+
+
 // routes for the application
     $app->get('/hello/:name', function ($name) {
         echo "Hello, " . $name;
@@ -31,8 +36,10 @@
     $app->get('/contact', function() use($app) {
         $app->render("contact.phtml", array("page" => "contact"));
     });
-    $app->get('/products', function() use($app) {
-        $app->render("products.phtml", array("page" => "products"));
+    $app->get('/products', function() use($app, $db) {
+        $sth = $db->prepare("SELECT * FROM products");
+        $sth->execute();
+        $app->render("products.phtml", array("page" => "products", "products_data" => $sth->fetchAll()));
     });
     $app->get('/', $index = function () use($app) {
         $app->render("index.phtml", array("page" => "index"));
@@ -43,11 +50,10 @@
         $mailer = new \Mailer();
         echo $mailer->mail("noreply@rhildred.github.io", $form->email, "message from " . $form->name, $form->message);
     });
-    $app->get('/api/products', function() use($app){
-       $db = new PDO('mysql:host=localhost;dbname=products;charset=utf8', 'root', ''); 
-       $sth = $db->prepare("SELECT * FROM products");
-       $sth->execute();
-       echo json_encode($sth->fetchAll());
+    $app->get('/api/products', function() use($app, $db){
+        $sth = $db->prepare("SELECT * FROM products");
+        $sth->execute();
+        echo json_encode($sth->fetchAll());
     });
     $app->options('/mailer', function(){});
     $app->run();

@@ -1,2 +1,8 @@
 <?php $this->layout("_layout.phtml") ?>
-<p>this is where the products page would go</p>
+<h1>Products</h1>
+<?php foreach($this->data['products_data'] as $product){ ?>
+     <p><?php echo $product['name'] ?></p>
+     <p><?php echo $product['description'] ?></p>
+     <p><img src="<?php echo $product['url'] ?>" alt="product image" /></p>
+ 
+ <?php } ?>
