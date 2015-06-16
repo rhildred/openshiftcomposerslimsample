@@ -2,6 +2,7 @@
     "require": {
         "slim/slim": "2.*",
         "rhildred/slimphpviews": "dev-master",
-        "rhildred/mailer": "dev-master"
+        "rhildred/mailer": "dev-master",
+        "brtriver/dbup": "*"
     }
 }
