@@ -1,3 +1,4 @@
 vendor/
 creds/
+.dbup/applied/*.sql
 *~
