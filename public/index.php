@@ -27,7 +27,10 @@
 
 
 // routes for the application
-    $app->get('/hello/:name', new \PHPView\Auth(), function ($name) {
+    $app->get('/hello/:name', function ($name) {
+        echo "Hello, " . $name;
+    });
+    $app->get('/private/:name', new \PHPView\Auth(), function ($name) {
         echo "Hello, " . $name;
     });
     $app->get('/about', function() use($app) {
