@@ -23,7 +23,7 @@
 
 // create database connection
 
-    $db = new PDO('mysql:host=localhost;dbname=products2;charset=utf8', 'root', ''); 
+    $db = new PDO('mysql:host=localhost;dbname=products;charset=utf8', 'root', ''); 
 
 
 // routes for the application

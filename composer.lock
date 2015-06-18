@@ -595,7 +595,7 @@
                     "": ""
                 }
             },
-            "notification-url": "http://packagist.org/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "time": "2015-06-11 14:19:28"
         },
         {
@@ -621,7 +621,7 @@
                     "PHPView": ""
                 }
             },
-            "notification-url": "http://packagist.org/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "time": "2015-06-08 12:59:19"
         },
         {
@@ -970,7 +970,7 @@
                     "Slim": "."
                 }
             },
-            "notification-url": "http://packagist.org/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
