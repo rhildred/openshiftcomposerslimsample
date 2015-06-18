@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d9aa125865b66e7d7ed04e628aee39d8",
+    "hash": "5aa9f3227143c087f187b1eb28997cd0",
     "packages": [
         {
             "name": "brtriver/dbup",

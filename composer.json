@@ -4,5 +4,10 @@
         "rhildred/slimphpviews": "dev-master",
         "rhildred/mailer": "dev-master",
         "brtriver/dbup": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "PHPView": ""
+        }
     }
 }
